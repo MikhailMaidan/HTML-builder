@@ -4,9 +4,7 @@ const path = require('path');
 async function mergeStyles() {
   const folderWithStyles = path.join(__dirname, 'styles');
   const bundleDestination = path.join(__dirname, 'project-dist', 'bundle.css');
-
   let allCssContent = '';
-
   const thingsInFolder = await fs.readdir(folderWithStyles, {
     withFileTypes: true,
   });
