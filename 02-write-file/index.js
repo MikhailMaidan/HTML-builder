@@ -1,18 +1,18 @@
-var fs = require('fs');
-var txtPath = require('path');
-var readline = require('readline');
+const fs = require('fs');
+const path = require('path');
+const readline = require('readline');
 
-var filePath = txtPath.join(__dirname, 'output.txt');
+const filePath = path.join(__dirname, 'output.txt');
 
-var writeStream = fs.createWriteStream(filePath, { flags: 'a' });
+const writeStream = fs.createWriteStream(filePath, { flags: 'a' });
 
-var rl = readline.createInterface({
+const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
 console.log(
-  'Greetings!Type anything that will be added to the newly created txt file or  type "exit" to terminate the program. Also press ctrl + c to terminate',
+  'Greetings! Type anything that will be added to the newly created txt file or type "exit" to terminate the program. Also press ctrl + c to terminate',
 );
 
 rl.on('line', function (input) {
